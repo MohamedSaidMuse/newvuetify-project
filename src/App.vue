@@ -41,16 +41,30 @@
     </v-app-bar>
 
     <v-main>
-      <!--  -->
+      <div class="container">
+    <Balance :total="23" />
+    <IncomeExpenses :income="+income" :expenses="+expenses" />
+    <TransactionList
+      :transactions="transactions"
+      @transactionDeleted="handleTransactionDeleted"
+    />
+    <AddTransaction @transactionSubmitted="handleTransactionSubmitted" />
+  </div>
     </v-main>
   </v-app>
+  
 </template>
 
 
 <script setup>
   import { ref } from 'vue'
   import '@mdi/font/css/materialdesignicons.css'; // Ensure you import the MDI CSS
-
+  
+import Header from './components/Header.vue';
+import Balance from './components/Balance.vue';
+import IncomeExpenses from './components/IncomeExpenses.vue';
+import TransactionList from './components/TransactionList.vue';
+//import AddTransaction from './components/AddTransaction.vue';
   const drawer = ref(null)
 </script>
 

@@ -32,6 +32,11 @@
 
 <script>
   export default {
-    data: () => ({ drawer: null }),
+    data: () => ({ drawer: null,
+  items: [
+    {title:'Dashboard'  , icon:'mdi-view-dashboard'},
+    {title:'About'  , icon:'mdi-help-box'},
+    ],
+     }),
   }
 </script>

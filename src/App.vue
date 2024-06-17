@@ -54,7 +54,22 @@
   </v-app>
   
 </template>
+<style>
+/* Ensure the parent of .container has full height */
+html, body, #app, v-main {
+  height: 100%;
+  margin: 0;
+}
 
+/* Center .container vertically and horizontally */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 100%;
+}
+</style>
 
 <script setup>
   import { ref } from 'vue'

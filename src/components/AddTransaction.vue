@@ -5,11 +5,12 @@
       <label for="text">Text</label>
       <input type="text" id="text" placeholder="Enter text..." v-model="text" />
     </div>
-    <div class ="here">
+    <div class ="here"></div>
     <div class="form-control">
-      <label for="amount"
+      <div class="Custom Style"><label for="amount"
         >Amount <br />
         (negative - expense, positive - income)</label
+      
       ></div>
       <input
         type="text"
@@ -21,6 +22,7 @@
     <!-- Error message display -->
     <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
     <button class="btn">Add transaction</button> </div>
+    <v-spacer></v-spacer> 
   </form>
 
 
@@ -31,13 +33,22 @@ html, body, #app, v-main {
   height: 100%;
   margin: 0;
 }
+.Custom Style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  height: 100%;
+  font-size: 20px; /* Adjust font size as needed */
+  color: #3498db; /* Example color: blue */
+}
 .here {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centers vertically */
   align-items: center; /* Centers horizontally */
   height: 100%;
-  font-size: 25px; /* Adjust font size as needed */
+  font-size: 20px; /* Adjust font size as needed */
   color: #3498db; /* Example color: blue */
 }
 .now {
@@ -46,7 +57,7 @@ html, body, #app, v-main {
   justify-content: center; /* Centers vertically */
   align-items: center; /* Centers horizontally */
   height: 100%;
-  font-size: 25px; /* Adjust font size as needed */
+  font-size: 20px; /* Adjust font size as needed */
   color: #3498db; /* Example color: blue */
 }
 /* Center .container vertically and horizontally */
@@ -56,7 +67,7 @@ html, body, #app, v-main {
   justify-content: center; /* Centers vertically */
   align-items: center; /* Centers horizontally */
   height: 100%;
-  font-size: 25px; /* Adjust font size as needed */
+  font-size: 20px; /* Adjust font size as needed */
   color: #3498db; /* Example color: blue */
 }
 </style>

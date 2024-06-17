@@ -68,6 +68,8 @@ html, body, #app, v-main {
   justify-content: center; /* Centers vertically */
   align-items: center; /* Centers horizontally */
   height: 100%;
+  font-size: 40px; /* Adjust font size as needed */
+  color: #3498db; /* Example color: blue */
 }
 </style>
 
